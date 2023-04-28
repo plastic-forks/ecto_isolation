@@ -4,6 +4,12 @@ This is a test framework to show how to set the transaction level in ecto
 using the postgres adapter. I'm using postgres as an example here but this
 should be directly comparable to other databases.
 
+## Original Post
+
+```sh
+open misc/original-post.html
+```
+
 ## Scenario
 
 The test problem that we're trying to solve is a "Lost Update" as
@@ -45,4 +51,3 @@ iex> EctoIsolation.Coordinator.race(EctoIsolation.UnsafeTransaction)
 # This transaction uses the correct isolation level and you'll see failures
 iex> EctoIsolation.Coordinator.race(EctoIsolation.SafeTransaction)
 ```
-
